@@ -5,6 +5,8 @@ const publicPath = process.env.PUBLIC_URL;
 render(
   {
     title: 'Catalog',
+    useBrowserHistory: true,
+    basePath: publicPath,
     logoSrc: publicPath + '/assets/catalog_logo.svg',
     theme: {
       // Uses default theme
