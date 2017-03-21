@@ -13,8 +13,8 @@
   },
   "scripts": {
     "start": "catalog start",
-    "build": "catalog build --public-path=/docs",
-    "deploy-staging": "catalog build --public-path=/docs && rsync -av catalog/build/* interact@interactivethings.com:www/staging.catalog.style/docs/",
-    "deploy-production": "catalog build --public-path=/docs && rsync -av catalog/build/* interact@interactivethings.com:www/catalog.style/docs/"
+    "build": "catalog build -o=docs --public-path=/docs",
+    "deploy-staging": "yarn run build && rsync -avz --delete --exclude .DS_Store docs/ interact@interactivethings.com:www/staging.catalog.style/docs/",
+    "deploy-production": "yarn run build && rsync -avz --delete --exclude .DS_Store docs/ interact@interactivethings.com:www/catalog.style/docs/"
   }
 }
