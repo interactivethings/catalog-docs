@@ -1,41 +1,39 @@
-import {render} from 'catalog';
-
-const publicPath = process.env.PUBLIC_URL;
+import {render} from '../lib';
 
 render(
   {
     title: 'Catalog',
-    logoSrc: publicPath + '/assets/catalog_logo.svg',
+    logoSrc: 'docs/assets/catalog_logo.svg',
     theme: {
       // Uses default theme
     },
     pages: [
-      {path: '/', title: 'Introduction', src: publicPath + '/intro.md'},
+      {path: '/', title: 'Introduction', src: 'docs/intro.md'},
       {
         path: 'get-started',
         title: 'Get Started',
-        src: publicPath + '/basics/get-started.md'
+        src: 'docs/basics/get-started.md'
       },
       {
         path: 'write-documentation',
         title: 'Write Documentation',
-        src: publicPath + '/basics/markdown.md'
+        src: 'docs/basics/markdown.md'
       },
       {
         path: 'configuration',
         title: 'Configuration',
-        src: publicPath + '/basics/configuration.md'
+        src: 'docs/basics/configuration.md'
       },
       {
         path: 'react-integration',
         title: 'React Integration',
-        src: publicPath + '/react-integration.md'
+        src: 'docs/react-integration.md'
       },
       // {title: 'Basics', pages: [
       // ]},
       // {title: 'Advanced', pages: [
-      //   {path: 'advanced/configuration', title: 'Configuration', src: publicPath + '/coming-soon.md'},
-      //   {path: 'advanced/extending', title: 'Writing Specimens', src: publicPath + '/coming-soon.md'},
+      //   {path: 'advanced/configuration', title: 'Configuration', src: 'docs/coming-soon.md'},
+      //   {path: 'advanced/extending', title: 'Writing Specimens', src: 'docs/coming-soon.md'},
       // ]},
       {
         title: 'Specimens',
@@ -43,77 +41,77 @@ render(
           {
             path: 'specimens',
             title: 'Overview',
-            src: publicPath + '/specimens/overview.md'
+            src: 'docs/specimens/overview.md'
           },
           {
             path: 'specimens/audio',
             title: 'Audio',
-            src: publicPath + '/specimens/audio.md'
+            src: 'docs/specimens/audio.md'
           },
           {
             path: 'specimens/code',
             title: 'Code',
-            src: publicPath + '/specimens/code.md'
+            src: 'docs/specimens/code.md'
           },
           {
             path: 'specimens/color',
             title: 'Color',
-            src: publicPath + '/specimens/color.md'
+            src: 'docs/specimens/color.md'
           },
           {
             path: 'specimens/color-palette',
             title: 'Color Palette',
-            src: publicPath + '/specimens/color-palette.md'
+            src: 'docs/specimens/color-palette.md'
           },
           {
             path: 'specimens/download',
             title: 'Download',
-            src: publicPath + '/specimens/download.md'
+            src: 'docs/specimens/download.md'
           },
           {
             path: 'specimens/hint',
             title: 'Hint',
-            src: publicPath + '/specimens/hint.md'
+            src: 'docs/specimens/hint.md'
           },
           {
             path: 'specimens/html',
             title: 'HTML',
-            src: publicPath + '/specimens/html.md',
-            styles: ['/example-style.css']
+            src: 'docs/specimens/html.md',
+            styles: ['docs/example-style.css']
           },
           {
             path: 'specimens/image',
             title: 'Image',
-            src: publicPath + '/specimens/image.md'
+            src: 'docs/specimens/image.md'
           },
           {
             path: 'specimens/table',
             title: 'Table',
-            src: publicPath + '/specimens/table.md'
+            src: 'docs/specimens/table.md'
           },
           {
             path: 'specimens/type',
             title: 'Type',
-            src: publicPath + '/specimens/type.md'
+            src: 'docs/specimens/type.md'
           },
           {
             path: 'specimens/video',
             title: 'Video',
-            src: publicPath + '/specimens/video.md'
+            src: 'docs/specimens/video.md'
           },
           {
             path: 'specimens/react',
             title: 'React',
-            src: publicPath + '/specimens/react.md'
+            src: 'docs/specimens/react.md'
           }
         ]
       },
       {
         path: 'test',
         title: 'Style Test',
-        src: publicPath + '/test/test.md',
-        styles: [publicPath + '/test/test.css'],
-        scripts: [publicPath + '/test/test.js'],
+        src: 'docs/test/test.md',
+        styles: ['docs/test/test.css'],
+        scripts: ['docs/test/test.js'],
         hideFromMenu: true
       }
     ]
