@@ -1,0 +1,14 @@
+{
+  "name": "catalog-docs",
+  "version": "1.0.0",
+  "description": "Catalog Docs",
+  "main": "catalog/index.js",
+  "repository": "git@github.com:interactivethings/catalog-docs.git",
+  "author": "Jeremy Stucki <jeremy@interactivethings.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "catalog": "^3.0.0-beta.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
