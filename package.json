@@ -4,6 +4,7 @@
   "description": "Catalog Docs",
   "main": "catalog/index.js",
   "repository": "git@github.com:interactivethings/catalog-docs.git",
+  "homepage": "http://catalog.style/docs",
   "author": "Jeremy Stucki <jeremy@interactivethings.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
