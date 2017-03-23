@@ -1,5 +1,19 @@
 import {render} from 'catalog';
 
+// We know that Catalog uses react-router, and furthermore that it
+// uses browserHistory. And browserHistory is a global/singleton,
+// so we can hook into it to listen for route changes and dispatch
+// page views.
+//
+// Note that 'location.pathname' includes the PUBLIC_URL prefix!
+import {browserHistory} from 'react-router';
+browserHistory.listen((location) => {
+  if (typeof _paq !== 'undefined') {
+    _paq.push(['setCustomUrl', location.pathname]);
+    _paq.push(['trackPageView']);
+  }
+})
+
 const publicPath = process.env.PUBLIC_URL;
 
 render(
