@@ -1,4 +1,5 @@
 import {render} from 'catalog';
+const publicPath = process.env.PUBLIC_URL;
 
 // We know that Catalog uses react-router, and furthermore that it
 // uses browserHistory. And browserHistory is a global/singleton,
@@ -12,9 +13,7 @@ browserHistory.listen((location) => {
     _paq.push(['setCustomUrl', location.pathname]);
     _paq.push(['trackPageView']);
   }
-})
-
-const publicPath = process.env.PUBLIC_URL;
+});
 
 render(
   {
