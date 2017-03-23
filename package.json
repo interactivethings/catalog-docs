@@ -1,6 +1,6 @@
 {
   "name": "catalog-docs",
-  "version": "0.21.3",
+  "version": "1.0.0",
   "description": "Catalog Docs",
   "main": "catalog/index.js",
   "repository": "git@github.com:interactivethings/catalog-docs.git",
