@@ -22,37 +22,31 @@ render(
     useBrowserHistory: true,
     basePath: publicPath,
     logoSrc: publicPath + '/assets/catalog_logo.svg',
-    theme: {
-      // Uses default theme
-    },
     pages: [
-      {path: '/', title: 'Introduction', src: publicPath + '/intro.md'},
       {
-        path: 'get-started',
-        title: 'Get Started',
-        src: publicPath + '/basics/get-started.md'
+        path: '/',
+        title: 'Introduction',
+        src: publicPath + '/introduction.md'},
+      {
+        path: 'installing',
+        title: 'Installing',
+        src: publicPath + '/basics/installing.md'
       },
       {
-        path: 'write-documentation',
-        title: 'Write Documentation',
-        src: publicPath + '/basics/markdown.md'
+        path: 'configuring',
+        title: 'Configuring',
+        src: publicPath + '/basics/configuring.md'
       },
       {
-        path: 'configuration',
-        title: 'Configuration',
-        src: publicPath + '/basics/configuration.md'
+        path: 'integrating',
+        title: 'Integrating',
+        src: publicPath + '/basics/integrating.md'
       },
       {
-        path: 'react-integration',
-        title: 'React Integration',
-        src: publicPath + '/react-integration.md'
+        path: 'editing',
+        title: 'Editing',
+        src: publicPath + '/basics/editing.md'
       },
-      // {title: 'Basics', pages: [
-      // ]},
-      // {title: 'Advanced', pages: [
-      //   {path: 'advanced/configuration', title: 'Configuration', src: publicPath + '/coming-soon.md'},
-      //   {path: 'advanced/extending', title: 'Writing Specimens', src: publicPath + '/coming-soon.md'},
-      // ]},
       {
         title: 'Specimens',
         pages: [
