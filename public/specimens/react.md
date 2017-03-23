@@ -156,13 +156,13 @@ responsive: true
   }
 }
 `}</style>
-<div class='responsive-playground-example'>
+<div className='responsive-playground-example'>
   <h1>Responsive Grid Example</h1>
-  <div class='grid'>
-    <div class='box'></div>
-    <div class='box'></div>
-    <div class='box'></div>
-    <div class='box'></div>
+  <div className='grid'>
+    <div className='box'></div>
+    <div className='box'></div>
+    <div className='box'></div>
+    <div className='box'></div>
   </div>
 </div>
 </div>
