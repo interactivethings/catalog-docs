@@ -1,10 +1,9 @@
-> Specimens are the core of Catalog. They help you present your style guide content.
+> Catalog offers a broad variety of specimens to document and specify every piece of your design system in the right format. Specimens are defined as simple Markdown code blocks, denoted with the individual type of specimen.
 
-## Using Specimens
+## Anatomy of a Specimen
 
-Specimens are defined as Markdown code blocks, denoted with the **specimen type**.
-
-The content of the code block contains the specimen configuration (**props**) in YAML or JSON format.
+### Properties
+Specimens are defined as Markdown code blocks, denoted with the **specimen type**. You configure the specimen with **props** in YAML or JSON format right after opening the code block. All available props for each specimen are documented on the following pages.
 
 For example:
 
@@ -15,7 +14,7 @@ name: 'Red'
 ```
 ````
 
-Here, `color` is the specimen **type**, `value` and `name` are **props** of the Color specimen.
+Here, `color` is the specimen type, `value` and `name` are props of the Color specimen.
 
 ### Content
 
@@ -41,7 +40,7 @@ function foo() {
 ```
 ````
 
-#### Combining Props and Content
+### Combining Properties and Content
 
 To combine props and content, separate them with `---` on a separate line (props go first).
 
@@ -66,6 +65,33 @@ function foo() {
 ```
 ````
 
+### Option String
+
+Specimen can also configured with an **option string** which is kind of a shorthand notation for certain props. The option string directly follows the **type** from which it is separated with a `|` (pipe) character. Multiple options are separated with a comma.
+
+For example:
+
+```code|lang-jsx,span-2
+<MyCoolComponent />
+```
+
+````code
+span: 4
+---
+```code|lang-jsx,span-2
+<MyCoolComponent />
+```
+````
+
+```hint
+Not all props are supported in the option string. Refer to the individual specimens to see which are.
+```
+
+```hint
+The specimen option string may be removed from future versions of Catalog. We recommend that you use **props** instead because they are more flexible.
+```
+
+## Using Specimens
 
 ### Specimen Layout
 
@@ -111,37 +137,7 @@ span: 3
 ```
 ````
 
-### Extras
-
-#### The Option String
-
-Specimen can also configured with an **option string** which is kind of a shorthand notation for certain props.
-
-The option string directly follows the **type** from which it is separated with a `|` (pipe) character. Multiple options are separated with a comma. For example: `code|span-2,lang-js`.
-
-For example:
-
-```code|lang-jsx,span-2
-<MyCoolComponent />
-```
-
-````code
-span: 4
----
-```code|lang-jsx,span-2
-<MyCoolComponent />
-```
-````
-
-```hint
-Not all props are supported in the option string. Refer to the individual specimens to see which are.
-```
-
-```hint
-The specimen option string may be removed from future versions of Catalog. We recommend that you use **props** instead because they are more flexible.
-```
-
-#### Specimens as React Components
+### Specimens as React Components
 
 In a React app, you can directly import Catalog's components and use them directly (only for the adventurous types). Props map to the specimen's … props.
 
