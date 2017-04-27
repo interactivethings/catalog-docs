@@ -17,7 +17,7 @@ consequat. Inline elements are styled nicely: text [link](http://example.com) te
 
 Link [to a heading](#jump-to-me)
 
-Link [to another page section](/specimens#combining-props-and-content)
+Link [to another page section](/specimens#combining-properties-and-content)
 
 Root-relative link [not handled by Catalog](/docs/assets/catalog_logo.svg)
 
@@ -26,6 +26,19 @@ Mailto link [not handled by Catalog](mailto:foo@bar.com)
 External link [not handled by Catalog](https://www.interactivethings.com/)
 
 ---
+
+## Hints with content
+
+```hint|warning
+# A heading
+
+Some `inline code`, yeah!
+
+And a [link](#hints-with-content)
+```
+
+
+
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
