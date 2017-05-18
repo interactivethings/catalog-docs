@@ -8,7 +8,7 @@
   "author": "Jeremy Stucki <jeremy@interactivethings.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "catalog": "^3.0.0-rc.1",
+    "catalog": "^3.0.0-rc.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

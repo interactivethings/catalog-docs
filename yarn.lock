@@ -1011,9 +1011,9 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
-catalog@^3.0.0-rc.1:
-  version "3.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/catalog/-/catalog-3.0.0-rc.1.tgz#135050a6a98f302386f2e2c6e503db5e7b819603"
+catalog@^3.0.0-rc.2:
+  version "3.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/catalog/-/catalog-3.0.0-rc.2.tgz#88676a32e636b2927544869ee58507f898a1f394"
   dependencies:
     args "^2.6.1"
     autoprefixer "^6.7.6"
