@@ -11,11 +11,11 @@
 ### Example
 
 ```video
-src: 'docs/assets/video.m4v'
+src: '/assets/video.m4v'
 ```
 
 ````code|lang-javascript
 ```video
-src: 'docs/assets/video.m4v'
+src: '/assets/video.m4v'
 ```
 ````

@@ -23,42 +23,42 @@ The `src` and `overlay` keys accept the `srcSet` notation, which allows the usag
 ```image
 light: true
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 ```
 
 ````code|span-3
 ```image
 light: true
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 ```
 ````
 
 ```image
 dark: true
 span: 3
-src: "docs/assets/catalog_logo--white.png"
+src: "/assets/catalog_logo--white.png"
 ```
 
 ````code|span-3
 ```image
 dark: true
 span: 3
-src: "docs/assets/catalog_logo--white.png"
+src: "/assets/catalog_logo--white.png"
 ```
 ````
 
 ```image
 plain: true
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 ```
 
 ````code|span-3
 ```image
 plain: true
 span: 2
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 ```
 ````
 
@@ -66,7 +66,7 @@ src: "docs/assets/catalog_logo.png"
 light: true
 plain: true
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 ```
 
 ````code|span-3
@@ -74,7 +74,7 @@ src: "docs/assets/catalog_logo.png"
 light: true
 plain: true
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 ```
 ````
 
@@ -82,7 +82,7 @@ src: "docs/assets/catalog_logo.png"
 dark: true
 plain: true
 span: 3
-src: "docs/assets/catalog_logo--white.png"
+src: "/assets/catalog_logo--white.png"
 ```
 
 ````code|span-3
@@ -90,7 +90,7 @@ src: "docs/assets/catalog_logo--white.png"
 dark: true
 plain: true
 span: 3
-src: "docs/assets/catalog_logo--white.png"
+src: "/assets/catalog_logo--white.png"
 ```
 ````
 
@@ -98,7 +98,7 @@ src: "docs/assets/catalog_logo--white.png"
 
 ```image
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 title: "Catalog Logo"
 description: |
   The quick brown fox
@@ -109,7 +109,7 @@ description: |
 ````code|span-3
 ```image
 span: 3
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 title: "Catalog Logo"
 description: |
   The quick brown fox
@@ -121,7 +121,7 @@ description: |
 ```image
 span: 3
 dark: true
-src: "docs/assets/catalog_logo--white.png"
+src: "/assets/catalog_logo--white.png"
 title: "Catalog Logo"
 description: |
   The quick brown fox
@@ -133,7 +133,7 @@ description: |
 ```image
 span: 3
 dark: true
-src: "docs/assets/catalog_logo--white.png"
+src: "/assets/catalog_logo--white.png"
 title: "Catalog Logo"
 description: |
   The quick brown fox
@@ -145,7 +145,7 @@ description: |
 ```image
 span: 3
 plain: true
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 title: "Catalog Logo"
 description: |
   The quick brown fox
@@ -157,7 +157,7 @@ description: |
 ```image
 span: 3
 plain: true
-src: "docs/assets/catalog_logo.png"
+src: "/assets/catalog_logo.png"
 title: "Catalog Logo"
 description: |
   The quick brown fox
@@ -172,14 +172,14 @@ By using a plain background and no title you can place a simple image.
 
 ```image
 plain: true
-src: "docs/assets/image_bw.jpg"
+src: "/assets/image_bw.jpg"
 description: "_Example image by [unsplash](https://unsplash.com/photos/-YMhg0KYgVc)._"
 ```
 
 ````code
 ```image
 plain: true
-src: "docs/assets/image_bw.jpg"
+src: "/assets/image_bw.jpg"
 description: "_Example image by [unsplash](https://unsplash.com/photos/-YMhg0KYgVc)._"
 ```
 ````
@@ -194,14 +194,14 @@ image needs to be preserved (eg. because it contains measurements).
 ```image
 plain: true
 scale: false
-src: "docs/assets/image_bw.jpg"
+src: "/assets/image_bw.jpg"
 ```
 
 ````
 ```image
 plain: true
 scale: false
-src: "docs/assets/image_bw.jpg"
+src: "/assets/image_bw.jpg"
 ```
 ````
 
@@ -211,14 +211,14 @@ src: "docs/assets/image_bw.jpg"
 The overlay image is useful to document layout measurements for implementation.
 
 ```image
-src: "docs/assets/catalog_logo.png"
-overlay: "docs/assets/catalog_logo-overlay.png"
+src: "/assets/catalog_logo.png"
+overlay: "/assets/catalog_logo-overlay.png"
 ```
 
 ````code
 ```image
-src: "docs/assets/catalog_logo.png"
-overlay: "docs/assets/catalog_logo-overlay.png"
+src: "/assets/catalog_logo.png"
+overlay: "/assets/catalog_logo-overlay.png"
 ```
 ````
 
@@ -226,15 +226,15 @@ overlay: "docs/assets/catalog_logo-overlay.png"
 
 ```image
 plain: true
-src: "docs/assets/catalog_logo.png"
-overlay: "docs/assets/catalog_logo-overlay.png"
+src: "/assets/catalog_logo.png"
+overlay: "/assets/catalog_logo-overlay.png"
 ```
 
 ````code
 ```image
 plain: true
-src: "docs/assets/catalog_logo.png"
-overlay: "docs/assets/catalog_logo-overlay.png"
+src: "/assets/catalog_logo.png"
+overlay: "/assets/catalog_logo-overlay.png"
 ```
 ````
 

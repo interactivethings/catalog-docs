@@ -19,7 +19,7 @@ Link [to a heading](#jump-to-me)
 
 Link [to another page section](/specimens#combining-properties-and-content)
 
-Root-relative link [not handled by Catalog](/docs/assets/catalog_logo.svg)
+Root-relative link [not handled by Catalog](/assets/catalog_logo.svg)
 
 Mailto link [not handled by Catalog](mailto:foo@bar.com)
 

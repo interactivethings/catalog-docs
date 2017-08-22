@@ -37,7 +37,7 @@ Each page section can be linked to directly by adding a hash to your link. Click
 - [A link to a page section](/specimens#content)
 - [A link to section on the same page](#example-page)
 - [External links work too of course](https://www.interactivethings.com/)
-- [Also external links which don't point to a page](/docs/assets/catalog_logo.png)
+- [Also external links which don't point to a page](/assets/catalog_logo.png)
 ```
 
 ## Example Page

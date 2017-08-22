@@ -94,7 +94,7 @@ Another use case is to document the ratio between the font size and the line hei
 ```type|span-3,kern,smoothen,single
 {
     "paragraphs": ["14/24"],
-    "image": "docs/assets/gradient.png",
+    "image": "/assets/gradient.png",
     "color": "#fff",
     "font": "sans-serif"
 }
@@ -104,7 +104,7 @@ Another use case is to document the ratio between the font size and the line hei
 ```type|span-3,kern,smoothen,single
 {
     "paragraphs": ["14/24"],
-    "image": "docs/assets/gradient.png",
+    "image": "/assets/gradient.png",
     "color": "#fff",
     "font": "sans-serif"
 }
