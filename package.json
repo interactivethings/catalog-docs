@@ -15,6 +15,7 @@
   "scripts": {
     "start": "catalog start",
     "build": "catalog build -o=build/docs --public-path=/docs/",
+    "build-netlify": "catalog build -o=build",
     "deploy-staging": "yarn run build && rsync -avz --delete --exclude .DS_Store build/docs/ interact@interactivethings.com:www/staging.catalog.style/docs/",
     "deploy-production": "yarn run build && rsync -avz --delete --exclude .DS_Store build/docs/ interact@interactivethings.com:www/catalog.style/docs/"
   }
