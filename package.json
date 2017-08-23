@@ -8,13 +8,13 @@
   "author": "Jeremy Stucki <jeremy@interactivethings.com>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "catalog": "^3.0.0-rc.2",
+    "catalog": "^3.0.0-rc.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "scripts": {
     "start": "catalog start",
-    "build": "catalog build -o=build/docs --public-path=/docs/",
+    "build": "catalog build -o=build/docs --public-url=/docs/",
     "build-netlify": "catalog build -o=build",
     "deploy-staging": "yarn run build && rsync -avz --delete --exclude .DS_Store build/docs/ interact@interactivethings.com:www/staging.catalog.style/docs/",
     "deploy-production": "yarn run build && rsync -avz --delete --exclude .DS_Store build/docs/ interact@interactivethings.com:www/catalog.style/docs/"
