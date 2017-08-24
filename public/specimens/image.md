@@ -211,12 +211,14 @@ src: "/assets/image_bw.jpg"
 The overlay image is useful to document layout measurements for implementation.
 
 ```image
+scale: false
 src: "/assets/catalog_logo.png"
 overlay: "/assets/catalog_logo-overlay.png"
 ```
 
 ````code
 ```image
+scale: false
 src: "/assets/catalog_logo.png"
 overlay: "/assets/catalog_logo-overlay.png"
 ```
@@ -226,6 +228,7 @@ overlay: "/assets/catalog_logo-overlay.png"
 
 ```image
 plain: true
+scale: false
 src: "/assets/catalog_logo.png"
 overlay: "/assets/catalog_logo-overlay.png"
 ```
@@ -233,6 +236,7 @@ overlay: "/assets/catalog_logo-overlay.png"
 ````code
 ```image
 plain: true
+scale: false
 src: "/assets/catalog_logo.png"
 overlay: "/assets/catalog_logo-overlay.png"
 ```

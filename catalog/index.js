@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Catalog, ContentLoader } from "catalog";
-const publicPath = process.env.PUBLIC_URL;
+import logo from '../public/assets/catalog_logo.svg';
 
 // We know that Catalog uses react-router, and furthermore that it
 // uses browserHistory. And browserHistory is a global/singleton,
@@ -128,8 +128,16 @@ const pages = [
     content: ContentLoader(() =>
       import(/* webpackChunkName: "test" */ "../public/test/test.md")
     ),
-    styles: [publicPath + "/test/test.css"],
-    scripts: [publicPath + "/test/test.js"],
+    styles: [`${process.env.PUBLIC_URL}/test/test.css`],
+    scripts: [`${process.env.PUBLIC_URL}/test/test.js`],
+    hideFromMenu: true
+  },
+  {
+    path: "testtemplate",
+    title: "Template Test",
+    content: ContentLoader(() =>
+      import("./testtemplate.js")
+    ),
     hideFromMenu: true
   }
 ];
@@ -138,8 +146,7 @@ ReactDOM.render(
   <Catalog
     title="Catalog"
     useBrowserHistory
-    basePath={publicPath}
-    logoSrc={publicPath + "/assets/catalog_logo.svg"}
+    logoSrc={logo}
     theme={{
       // Uses default theme
     }}
