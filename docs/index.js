@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Catalog, ContentLoader } from "catalog";
-import logo from '../public/assets/catalog_logo.svg';
+import logo from "./catalog_logo.svg";
 
 // We know that Catalog uses react-router, and furthermore that it
 // uses browserHistory. And browserHistory is a global/singleton,
@@ -17,117 +17,110 @@ browserHistory.listen(location => {
   }
 });
 
+// Create a convenient loader for markdown files
+const markdownLoader = page => ContentLoader(() => import(`./${page}.md`));
+
 const pages = [
   {
     path: "/",
     title: "Introduction",
-    content: ContentLoader(() => import("../public/basics/get-started.md"))
+    content: markdownLoader("basics/get-started")
   },
   {
     path: "get-started",
     title: "Get Started",
-    content: ContentLoader(() => import("../public/basics/get-started.md"))
+    content: markdownLoader("basics/get-started")
   },
   {
     path: "write-documentation",
     title: "Write Documentation",
-    content: ContentLoader(() => import("../public/basics/markdown.md"))
+    content: markdownLoader("basics/markdown")
   },
   {
     path: "configuration",
     title: "Configuration",
-    content: ContentLoader(() => import("../public/basics/configuration.md"))
+    content: markdownLoader("basics/configuration")
   },
   {
     path: "react-integration",
     title: "React Integration",
-    content: ContentLoader(() => import("../public/react-integration.md"))
+    content: markdownLoader("react-integration")
   },
-  // {title: 'Basics', pages: [
-  // ]},
-  // {title: 'Advanced', pages: [
-  //   {path: 'advanced/configuration', title: 'Configuration', content: ContentLoader(() => import('../public/coming-soon.md'},))
-  //   {path: 'advanced/extending', title: 'Writing Specimens', content: ContentLoader(() => import('../public/coming-soon.md'},))
-  // ]},
   {
     title: "Specimens",
     pages: [
       {
         path: "specimens",
         title: "Overview",
-        content: ContentLoader(() => import("../public/specimens/overview.md"))
+        content: markdownLoader("specimens/overview")
       },
       {
         path: "specimens/audio",
         title: "Audio",
-        content: ContentLoader(() => import("../public/specimens/audio.md"))
+        content: markdownLoader("specimens/audio")
       },
       {
         path: "specimens/code",
         title: "Code",
-        content: ContentLoader(() => import("../public/specimens/code.md"))
+        content: markdownLoader("specimens/code")
       },
       {
         path: "specimens/color",
         title: "Color",
-        content: ContentLoader(() => import("../public/specimens/color.md"))
+        content: markdownLoader("specimens/color")
       },
       {
         path: "specimens/color-palette",
         title: "Color Palette",
-        content: ContentLoader(() =>
-          import("../public/specimens/color-palette.md")
-        )
+        content: markdownLoader("specimens/color-palette")
       },
       {
         path: "specimens/download",
         title: "Download",
-        content: ContentLoader(() => import("../public/specimens/download.md"))
+        content: markdownLoader("specimens/download")
       },
       {
         path: "specimens/hint",
         title: "Hint",
-        content: ContentLoader(() => import("../public/specimens/hint.md"))
+        content: markdownLoader("specimens/hint")
       },
       {
         path: "specimens/html",
         title: "HTML",
-        content: ContentLoader(() => import("../public/specimens/html.md")),
+        content: markdownLoader("specimens/html"),
         styles: ["/example-style.css"]
       },
       {
         path: "specimens/image",
         title: "Image",
-        content: ContentLoader(() => import("../public/specimens/image.md"))
+        content: markdownLoader("specimens/image")
       },
       {
         path: "specimens/table",
         title: "Table",
-        content: ContentLoader(() => import("../public/specimens/table.md"))
+        content: markdownLoader("specimens/table")
       },
       {
         path: "specimens/type",
         title: "Type",
-        content: ContentLoader(() => import("../public/specimens/type.md"))
+        content: markdownLoader("specimens/type")
       },
       {
         path: "specimens/video",
         title: "Video",
-        content: ContentLoader(() => import("../public/specimens/video.md"))
+        content: markdownLoader("specimens/video")
       },
       {
         path: "specimens/react",
         title: "React",
-        content: ContentLoader(() => import("../public/specimens/react.md"))
+        content: markdownLoader("specimens/react")
       }
     ]
   },
   {
     path: "test",
     title: "Style Test",
-    content: ContentLoader(() =>
-      import(/* webpackChunkName: "test" */ "../public/test/test.md")
-    ),
+    content: markdownLoader("test/test"),
     styles: [`${process.env.PUBLIC_URL}/test/test.css`],
     scripts: [`${process.env.PUBLIC_URL}/test/test.js`],
     hideFromMenu: true
@@ -135,9 +128,7 @@ const pages = [
   {
     path: "testtemplate",
     title: "Template Test",
-    content: ContentLoader(() =>
-      import("./testtemplate.js")
-    ),
+    content: ContentLoader(() => import("./test/testtemplate.js")),
     hideFromMenu: true
   }
 ];
