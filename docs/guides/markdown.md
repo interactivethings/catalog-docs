@@ -1,12 +1,16 @@
-With Catalog you write documentation using [Markdown](http://daringfireball.net/projects/markdown/syntax). For an introduction to the Markdown syntax, [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) of GitHub is a good starting point.
+> With Catalog you write documentation using [Markdown](http://daringfireball.net/projects/markdown/syntax).
+
+For an introduction to the Markdown syntax, [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) of GitHub is a good starting point.
 
 Catalog supports all basic Markdown features like headings, paragraphs, blockquotes, lists etc. To create interactive and rich documentation, Catalog introduces **Specimens**.
 
 ## Specimens
 
-Specimens are a kind of _tagged_ code blocks. In the same way that on GitHub you define the programming language of a code block for syntax highlighting, in Catalog you specify a Specimen type and options.
+Specimens are an extension of standard Markdown syntax to include special content like color palettes and fully interactive components in your style guide.
 
-For example, to place a color swatch in your documentation you write
+All Specimens are written as _tagged_ Markdown code blocks (similar to how you specify the programming language of a code block for syntax highlighting on GitHub).
+
+For example, to place a color swatch in your documentation:
 
 ````
 ```color

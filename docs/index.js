@@ -24,27 +24,61 @@ const pages = [
   {
     path: "/",
     title: "Introduction",
-    content: markdownLoader("basics/get-started")
+    content: markdownLoader("intro")
   },
   {
-    path: "get-started",
-    title: "Get Started",
-    content: markdownLoader("basics/get-started")
+    title: "Installation",
+    pages: [
+      {
+        path: "installation/create-catalog",
+        title: "Create Catalog",
+        content: markdownLoader("installation/create-catalog")
+
+      },
+      {
+        path: "installation/standalone",
+        title: "Standalone",
+        content: markdownLoader("installation/standalone")
+
+      },
+      {
+        path: "installation/npm",
+        title: "npm",
+        content: markdownLoader("installation/npm")
+
+      }
+    ]
   },
   {
-    path: "write-documentation",
-    title: "Write Documentation",
-    content: markdownLoader("basics/markdown")
+    title: "Guides",
+    pages: [
+      {
+        path: "guides/markdown",
+        title: "Markdown",
+        content: markdownLoader("guides/markdown")
+      },
+      {
+        path: "guides/frameworks",
+        title: "Framework Integration",
+        content: markdownLoader("guides/frameworks")
+      },
+
+    ]
   },
   {
-    path: "configuration",
-    title: "Configuration",
-    content: markdownLoader("basics/configuration")
-  },
-  {
-    path: "react-integration",
-    title: "React Integration",
-    content: markdownLoader("react-integration")
+    title: "API Documentation",
+    pages: [
+      {
+        path: "api/configuration",
+        title: "Configuration",
+        content: markdownLoader("api/configuration")
+      },
+      {
+        path: "api/react",
+        title: "React Components",
+        content: markdownLoader("api/react")
+      },
+    ]
   },
   {
     title: "Specimens",
