@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Catalog, ContentLoader } from "catalog";
+import { Catalog, pageLoader } from "catalog";
 import logo from "./catalog_logo.svg";
 
 // We know that Catalog uses react-router, and furthermore that it
@@ -18,7 +18,7 @@ browserHistory.listen(location => {
 });
 
 // Create a convenient loader for markdown files
-const markdownLoader = page => ContentLoader(() => import(`./${page}.md`));
+const markdownLoader = page => pageLoader(() => import(`./${page}.md`));
 
 const pages = [
   {
@@ -128,7 +128,7 @@ const pages = [
   {
     path: "testtemplate",
     title: "Template Test",
-    content: ContentLoader(() => import("./test/testtemplate.js")),
+    content: pageLoader(() => import("./test/testtemplate.js")),
     hideFromMenu: true
   }
 ];
