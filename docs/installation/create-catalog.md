@@ -20,16 +20,17 @@ create-catalog <directory>
 
 Create Catalog will install everything that's necessary to run Catalog and then display instructions for using it.
 
+```hint|neutral
+By default, Catalog integrates with [Create React App](https://github.com/facebookincubator/create-react-app) and [next.js](https://github.com/zeit/next.js). Run `create-catalog` in the same directory as you've set up your app.
+```
 
-#### With npx
+## Installing with npx or yarn
 
 If you have npm >= 5.2.0 (check with `npm -v`), you can use `npx` to skip the manual installation step.
 
 ```code
 npx create-catalog <directory>
 ```
-
-#### With yarn
 
 If you're using [yarn](https://yarnpkg.com/) (>= 0.25) instead of npm, you can also skip the manual installation step.
 

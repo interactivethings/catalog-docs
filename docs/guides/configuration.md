@@ -1,3 +1,5 @@
+> Configure Catalog to add style guide pages, import code from your application, and theme it to match your brand
+
 To get Catalog running, you need to configure it with a `title` and some `pages`.
 
 Either provide the configuration to `Catalog.render()` or to the `Catalog` React component.
@@ -36,25 +38,57 @@ ReactDOM.render(
 );
 ```
 
-## Essentials
-
 ### `title`
+
+`string`
 
 The title of your Catalog
 
+
+## Pages
+
 ### `pages`
 
-Catalog pages need at least three properties:
+`Array<Page|PageGroup>`
 
+Add pages and page groups to your style guide.
 
-##### Page Properties
+#### Page
 
-- `path : String`: The path where the page is accessible
-- `title : String`: The title of the page (also shows up in the navigation)
-- `src : String`: The path of the source Markdown document
+- `path: string`: The path where the page is accessible
+- `title: string`: The title of the page (also shows up in the navigation)
+- `content: React.Component`: A Catalog page
+- `imports?: Imports`: page [imports](#imports) (optional)
+- `styles?: Styles`: page [styles](#styles) (optional)
+- `scripts?: Scripts`: page [scripts](#scripts) (optional)
 
 ```hint|directive
 You should at least have a page with path `'/'` (which is the first page shown)
+```
+
+##### A note on the `content` property
+
+A page's `content` property expects a valid React component.
+
+Either import page components statically or use Catalog's `pageLoader` function to create components that lazy-load pages from different sources.
+
+These are all valid examples for `content`:
+
+```code
+lang: js
+---
+// Statically import a page
+import Intro from './Intro';
+{ content: Intro }
+
+// Statically `require` a page
+{ content: require('./Intro') }
+
+// Lazy-load a static Markdown page in the browser
+{ content: Catalog.pageLoader('intro.md') }
+
+// Lazy-load a page component
+{ content: Catalog.pageLoader(() => import('./Intro'))) }
 ```
 
 ##### Page Example
@@ -68,21 +102,19 @@ lang: js
     {
       path: '/',
       title: 'Introduction',
-      src: 'intro.md'
+      content: Catalog.pageLoader('intro.md') // Load page from a static Markdown file
     },
     // Other pages …
   ]
 }
 ```
 
-### Page Groups
+#### Page Group
 
 To create a page group, specify an object with a `title` and a `pages` property. The pages added to the group are grouped in the navigation.
 
-##### Page Group Properties
-
-- `title : String`: The title of the page group
-- `pages : Array<Page>`: An array of sub-pages
+- `title: string`: The title of the page group
+- `pages: Array<Page>`: An array of pages
 
 ```hint
 Page groups can only contain pages but not other page groups.
@@ -95,7 +127,7 @@ Page groups can only contain pages but not other page groups.
     {
       path: '/',
       title: 'Introduction',
-      src: 'intro.md'
+      content: Catalog.pageLoader('intro.md')
     },
     {
       title: 'Basics',
@@ -103,7 +135,7 @@ Page groups can only contain pages but not other page groups.
         {
           path: '/get-started',
           title: 'Get Started',
-          src: 'get-started.md'
+          content: Catalog.pageLoader('get-started.md')
         },
         // Other subpages of 'Basics'
       ]
@@ -113,61 +145,23 @@ Page groups can only contain pages but not other page groups.
 }
 ```
 
-### React Component Pages
-
-When [integrating Catalog in a React project](/react-integration), you can directly use components as page content. This leads to better performance (the content doesn't have to be loaded and transformed first) and better integration with your development setup. For example, if you have configured hot reloading with webpack, you can edit your documentation and see changes immediately without having to reload your browser.
-
-##### Component Page Properties
-
-- `path : String`: The path where the page is accessible
-- `title : String`: The title of the page (also shows up in the navigation)
-- `component : Component`: A valid React component
-
-##### Component Page Example
-
-```code
-lang: js
----
-{
-  title: 'My Catalog',
-  pages: [
-    {
-      path: '/',
-      title: 'Introduction',
-      component: Introduction // `Introduction` is a module which exports a React component
-    },
-    // Other pages …
-  ]
-}
-```
-
-##### `markdown`
-
-To make it easier to write the bulk of the documentation with Markdown but intersperse with your own React components, you can use the `Catalog.markdown` function.
-
-```code
-lang: js
----
-export default Catalog.markdown`
-# This is a heading
-
-${<MyComponent />}
-`
-```
-
-## Routes
+## Routing
 
 ### `useBrowserHistory`
+
+`boolean`
 
 To maximize compatibility, Catalog uses hash-based routing (e.g. `my-styleguide.com/#/about`) by default. If your web server is [configured properly](http://readystate4.com/2012/05/17/nginx-and-apache-rewrite-to-support-html5-pushstate/), it can also use HTML5 pushstate-based routing, so you get "real" URLs (e.g. `my-styleguide.com/about`). Set `useBrowserHistory` to `true` to enable this.
 
 ### `basePath`
 
+`string`
+
 If you want Catalog to run under a certain base path, e.g. `my-styleguide.com/catalog/about`, set the `basePath` configuration option. The base path will be prefixed to all page paths.
 
-This works best together with `useBrowserHistory`. Otherwise the `basePath` defines the path prefix _after_ the URL hash, e.g. `#/catalog/about`.
+This only works best together with `useBrowserHistory`.
 
-##### Route Settings Example
+#### Route Settings Example
 
 ```code
 lang: js
@@ -202,9 +196,11 @@ You can either set these at the top level, or on each page. Styles, scripts, and
 
 ### `styles`
 
+`Array<string>`
+
 Catalog will include CSS files referenced in the `styles` option.
 
-##### Styles Example
+#### Styles Example
 
 ```code
 lang: js
@@ -224,9 +220,11 @@ lang: js
 
 ### `scripts`
 
+`Array<string>`
+
 Catalog will inject JavaScript files referenced in the `scripts` option.
 
-##### Scripts Example
+#### Scripts Example
 
 ```code
 lang: js
@@ -246,9 +244,11 @@ lang: js
 
 ### `imports`
 
+`{[key: string]: any}`
+
 To make components and other code available to your [Specimens](/specimens), use the `imports` option.
 
-##### Imports Example
+#### Imports Example
 
 ```code
 lang: js
@@ -270,6 +270,8 @@ lang: js
 
 ### `responsiveSizes`
 
+`Array<{name: string, width: number, height: number}>`
+
 To test or document responsive behavior of [React](/specimens/react#responsive-display) and [HTML](/specimens/html#responsive-display) components, Catalog provides some basic default screen sizes (`small, medium, large` and `xlarge`). Given that each project has different requirements, you can easily define new sizes.
 
 Let's assume you want to work with a smart watch, a tablet and Desktop, the Catalog configuration could look like this:
@@ -282,19 +284,22 @@ responsiveSizes: [
   {name: 'tablet', width: 1024, height: 768},
   {name: 'desktop', width: 1920, height: 1080},
 ],
-pages : [
+pages: [
 ...
 
 ```
-
 
 ## Theming Catalog
 
 ### `logoSrc`
 
+`string`
+
 Path to a logo image file which will be placed in the top-left corner.
 
 ### `theme`
+
+`Object`
 
 Object which describes which colors, fonts and font sizes to use.
 
@@ -355,3 +360,4 @@ codeStyles: {
   tag: {color: '#FF5555', fontWeight: 'bold'}
 }
 ```
+

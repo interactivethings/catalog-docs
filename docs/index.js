@@ -36,48 +36,47 @@ const pages = [
 
       },
       {
-        path: "installation/standalone",
-        title: "Standalone",
-        content: markdownLoader("installation/standalone")
+        path: "installation/module",
+        title: "As Module",
+        content: markdownLoader("installation/module")
 
       },
       {
-        path: "installation/npm",
-        title: "npm",
-        content: markdownLoader("installation/npm")
-
-      }
+        path: "installation/standalone",
+        title: "Standalone",
+        content: markdownLoader("installation/standalone")
+      },
     ]
   },
   {
     title: "Guides",
     pages: [
       {
-        path: "guides/markdown",
-        title: "Markdown",
+        path: "guides/Writing Documentation",
+        title: "Writing Documentation",
         content: markdownLoader("guides/markdown")
       },
       {
-        path: "guides/frameworks",
-        title: "Framework Integration",
-        content: markdownLoader("guides/frameworks")
-      },
-
-    ]
-  },
-  {
-    title: "API Documentation",
-    pages: [
-      {
-        path: "api/configuration",
+        path: "guides/configuration",
         title: "Configuration",
-        content: markdownLoader("api/configuration")
+        content: markdownLoader("guides/configuration")
       },
       {
-        path: "api/react",
-        title: "React Components",
-        content: markdownLoader("api/react")
+        path: "guides/react",
+        title: "React API",
+        content: markdownLoader("guides/react")
       },
+      {
+        path: "guides/webpack-babel",
+        title: "Custom Build Setup",
+        content: markdownLoader("guides/webpack-babel")
+      },
+      // {
+      //   path: "guides/frameworks",
+      //   title: "Framework Integration",
+      //   content: markdownLoader("guides/frameworks")
+      // },
+
     ]
   },
   {

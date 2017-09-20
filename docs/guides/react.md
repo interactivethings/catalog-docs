@@ -1,5 +1,15 @@
 > Catalog itself is a React app. You can use its components to document your code more effectively.
 
+You can write your complete style guide in Markdown files, including interactive components. But Catalog also supports creating pages using JavaScript and React components directly, which allows you to do some interesting things:
+
+- import your components (and any code) like you'd do in any React app
+- include any other components, not just Specimens
+- use any data fetching or application state on pages and in Specimens
+- let static typecheckers like [Flow](https://flow.org) or [TypeScript](https://www.typescriptlang.org/) check your Specimens (preventing you from writing wrong documentation)
+- generate pages programmatically
+
+You can also mix pages from Markdown and JavaScript files.
+
 ## `Catalog`
 
 The main `Catalog` component accepts all [configuration options](/api/configuration) as props. Use it directly with `ReactDOM.render()`.
@@ -61,11 +71,6 @@ span: 3
 
 Instead of using Markdown files, you can use Catalog's `markdown` tagged template literal to create pages.
 
-This enables you to
-
-- generate documentation programmatically,
-- mix specimens with other components,
-- or share state across specimens.
 
 … while still retaining the convenience of writing Markdown for the page content.
 

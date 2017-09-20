@@ -1,4 +1,4 @@
-> The standalone version of Catalog is completely free from dependencies. All you need to get started is a single HTML document.
+> The standalone version of Catalog doesn't need any installation and can be used directly in the browser.
 
 If using [Create Catalog](/installation/create-catalog) is not an option (maybe because you don't have/want Node.js on your computer), you can also embed Catalog with a `<script>` tag. Be aware that you still need a [web server](#running-catalog-standalone-on-your-local-machine) for local development.
 
