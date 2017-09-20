@@ -1,4 +1,4 @@
-> Create Catalog is a command line tool to set up Catalog for your style guide.
+> Create Catalog is a command line tool to set up Catalog for your style guide. One single command takes care of installing all dependencies and configuring the basics.
 
 ```hint|directive
 To use Create Catalog, you need a recent version of [Node.js](https://nodejs.org/) installed on your computer (Version 8+ recommended).
