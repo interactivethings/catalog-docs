@@ -1,20 +1,17 @@
-```hint|neutral
-TK: WRITE INTRO
+> Catalog is a tool for creating living style guides for digital products. It combines design documentation and assets with real, live components in one single place.
+  
+> Learn more about why you should consider Catalog on [its website](https://www.catalog.style).
 
-- Short blurb about what Catalog is?
-- Link to catalog.style
-- Link to playground
-- TOC?
-```
+> Give it a test run on the [Catalog playground](https://www.catalog.style/try).
 
 ### Source Code
 
-Catalog is Open Source and on [GitHub](https://github.com/interactivethings/catalog/).
+Catalog is open source and available on [GitHub](https://github.com/interactivethings/catalog/).
 
 ### Credits
 
-Catalog is developed by [many people](https://github.com/interactivethings/catalog/blob/master/AUTHORS) at [Interactive Things](http://www.interactivethings.com/), a User Experience and Data Visualization Studio based in Zürich.
+Catalog is developed by [the team](https://github.com/interactivethings/catalog/blob/master/AUTHORS) at [Interactive Things](https://www.interactivethings.com/), a digital product design studio based in Zürich, Switzerland.
 
-### See also
+### License
 
-- https://github.com/react-cosmos/react-cosmos
+Catalog is distributed under the BSD-3-Clause license.
