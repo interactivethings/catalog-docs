@@ -49,36 +49,41 @@ const pages = [
     ]
   },
   {
-    title: "Guides",
+    title: "Configuration",
     pages: [
       {
-        path: "guides/Writing Documentation",
-        title: "Writing Documentation",
-        content: markdownLoader("guides/markdown")
+        path: "configuration",
+        title: "How To",
+        content: markdownLoader("configuration/basics")
       },
       {
-        path: "guides/configuration",
-        title: "Configuration",
-        content: markdownLoader("guides/configuration")
+        path: "configuration/pages",
+        title: "Pages",
+        content: markdownLoader("configuration/pages")
       },
       {
-        path: "guides/react",
-        title: "React API",
-        content: markdownLoader("guides/react")
+        path: "configuration/imports",
+        title: "Imports",
+        content: markdownLoader("configuration/imports")
       },
       {
-        path: "guides/webpack-babel",
-        title: "Custom Build Setup",
-        content: markdownLoader("guides/webpack-babel")
+        path: "configuration/theming",
+        title: "Theming",
+        content: markdownLoader("configuration/theming")
       },
-      // {
-      //   path: "guides/frameworks",
-      //   title: "Framework Integration",
-      //   content: markdownLoader("guides/frameworks")
-      // },
-
+      {
+        path: "configuration/other",
+        title: "Other",
+        content: markdownLoader("configuration/other")
+      },
     ]
   },
+  {
+    path: "writing-content",
+    title: "Writing Content",
+    content: markdownLoader("guides/markdown")
+  },
+
   {
     title: "Specimens",
     pages: [
@@ -148,6 +153,27 @@ const pages = [
         title: "React",
         content: markdownLoader("specimens/react")
       }
+    ]
+  },
+  {
+    title: "Guides",
+    pages: [
+      {
+        path: "guides/react",
+        title: "React API",
+        content: markdownLoader("guides/react")
+      },
+      {
+        path: "guides/webpack-babel",
+        title: "Custom Build Setup",
+        content: markdownLoader("guides/webpack-babel")
+      },
+      // {
+      //   path: "guides/frameworks",
+      //   title: "Framework Integration",
+      //   content: markdownLoader("guides/frameworks")
+      // },
+
     ]
   },
   {
