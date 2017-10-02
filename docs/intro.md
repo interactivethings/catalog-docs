@@ -1,8 +1,17 @@
 > Catalog is a tool for creating living style guides for digital products. It combines design documentation and assets with real, live components in one single place.
-  
-> Learn more about why you should consider Catalog on [its website](https://www.catalog.style).
 
-> Give it a test run on the [Catalog playground](https://www.catalog.style/try).
+### Get Started
+
+- [How to install Catalog](/installation)
+- [Catalog configuration](/configuration)
+- [Write content using Markdown](/writing-content)
+- [Document your design system and components with Specimens](/specimens)
+
+
+### Useful Links
+
+- [Try Catalog in your browser](https://www.catalog.style/try)
+- [Catalog Website](https://www.catalog.style)
 
 ### Source Code
 
