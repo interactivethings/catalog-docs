@@ -2,7 +2,7 @@
 
 ### Get Started
 
-- [How to install Catalog](/installation)
+- [How to install Catalog](/installation/create-catalog)
 - [Catalog configuration](/configuration)
 - [Write content using Markdown](/writing-content)
 - [Document your design system and components with Specimens](/specimens)
