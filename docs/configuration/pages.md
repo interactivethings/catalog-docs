@@ -11,6 +11,7 @@ Add pages and page groups to your style guide.
 - `path: string`: The path where the page is accessible
 - `title: string`: The title of the page (also shows up in the navigation)
 - `content: React.Component`: A Catalog page
+- `hideFromMenu: boolean`: Hide the page in the navigation (optional)
 - `imports?: Imports`: page [imports](/configuration/imports#imports) (optional)
 - `styles?: Styles`: page [styles](/configuration/imports#styles) (optional)
 - `scripts?: Scripts`: page [scripts](/configuration/imports#scripts) (optional)
