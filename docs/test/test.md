@@ -37,6 +37,29 @@ Some `inline code`, yeah!
 And a [link](#hints-with-content)
 ```
 
+## Responsive scrolling test
+
+```react
+responsive: true
+---
+<div style={{height: '2000px', background: 'linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(224,230,39,1) 100%)'}}>Helloo</div>
+```
+
+
+## Fancy React source transformation
+
+```react
+const Foo = ({name}) => <div>{name}</div>;
+const h=React.createElement;
+h(Foo, {name: 'boo'});
+```
+
+```react
+[
+  <div>hey</div>,
+  <div>ho</div>
+]
+```
 
 
 
