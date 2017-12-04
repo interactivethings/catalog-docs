@@ -140,6 +140,7 @@ Another use case is to document the ratio between the font size and the line hei
 ```type
 {  
   "span": 3,
+  "color": "#00263e",
   "font": "sans-serif",
   "headings": [
     { "label": "Headline 1", "value": 49 },
@@ -154,6 +155,7 @@ Another use case is to document the ratio between the font size and the line hei
 ````code|lang-javascript,span-3
 ```type
 {
+  "color": "#00263e",
   "font": "sans-serif",
   "headings": [
     { "label": "Headline 1", "value": 49 },
