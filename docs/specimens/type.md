@@ -135,6 +135,36 @@ Another use case is to document the ratio between the font size and the line hei
 ```
 ````
 
+#### Customize labels
+
+```type
+{  
+  "span": 3,
+  "font": "sans-serif",
+  "headings": [
+    { "label": "Headline 1", "value": 49 },
+	{ "label": "Headline 2", "value": 38 }
+  ],
+  "paragraphs": [
+  	{ "label": "Body Copy", "value": "15/22.5" }
+  ]
+}
+```
+
+````code|lang-javascript,span-3
+```type
+{
+  "font": "sans-serif",
+  "headings": [
+    { "label": "Headline 1", "value": 49 },
+	{ "label": "Headline 2", "value": 38 }
+  ],
+  "paragraphs": [
+    { "label": "Body Copy", "value": "15/22.5" }
+  ]
+}
+```
+````
 
 #### Specifying contrasts
 
