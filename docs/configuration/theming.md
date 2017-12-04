@@ -40,17 +40,20 @@ The primary foreground and background colors.
 
 ##### `lightColor`
 
-NavigationBar background color, but also sometimes used as a foreground
-or border color.
+Used as a foreground or border color.
 
 ##### `pageHeading{Background,TextColor,Height}`
 
 Used in PageHeader. `pageHeadingHeight` is not a color but the height of the
 whole PageHeader component.
 
+##### `navBar{Background,TextColor}`
+
+Used in the navigation bar.
+
 ##### `brandColor`
 
-NavigationBar (links), ResponsiveTabs (tab text), Download specimen (title text).
+ResponsiveTabs (tab text), Download specimen (title text).
 Typography: headings.
 
 ##### `sidebarColor{,Active,Text,TextActive,Line,Heading}`
