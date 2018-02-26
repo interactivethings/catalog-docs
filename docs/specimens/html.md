@@ -5,6 +5,7 @@ Per default, a code toggle button allows easy access to the source without havin
 ### Props
 
 - `noSource: boolean` Removes the source code toggle button
+- `showSource: boolean` Shows the source code section by default
 - `frame: boolean` Wraps output in an `<iframe>` (to prevent style collisions and allow for viewport-relative styling (e.g. using `vw` or `position: fixed`))
 - `responsive: boolean | string | array` sets a fixed screensize or allows switching between multiple sizes
 - `light: boolean` a light checkered background (default)
